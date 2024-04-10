@@ -9,11 +9,28 @@ from scipy import interpolate, signal, fft
 import pysindy as ps
 import os
 
-# Best model at the moment: train640_32_500_manuel
-model2 = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/train640_32_500_manuel/weights/best.pt")
-model = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/bestProjet1a.pt")
-# cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/testDetection.mp4")
-cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/FishDataset/videoNadia/T3_Fish3_C2_270923 - Trim2.mp4")
+## Best model at the moment: train640_32_500_manuel
+#model2 = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/train640_32_500_manuel/weights/best.pt")
+#model = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/bestProjet1a.pt")
+## cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/testDetection.mp4")
+#cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/FishDataset/videoNadia/T3_Fish3_C2_270923 - Trim2.mp4")
+
+# 定义根目录相对于当前脚本的路径
+root_dir = os.path.join(os.getcwd())  # 如果脚本在'Aquaman/scripts'，回溯到'Aquaman'
+
+# 定义模型和视频文件的相对路径
+model2_path = os.path.join(root_dir, "runs/segment/train640_32_500_manuel/weights/best.pt")
+model_path = os.path.join(root_dir, "runs/segment/bestProjet1a.pt")
+#video_path = os.path.join(root_dir, "T4_Fish3_C2_270923 - Trim2.mp4")
+#video_path = os.path.join(root_dir, "20cut1080.mp4")
+video_path = os.path.join(root_dir, "E:/fishlabel/19-40/converted_videos/converted_20.mp4")
+
+# 加载模型
+model2 = YOLO(model2_path)
+model = YOLO(model_path)
+
+# 打开视频文件
+cap = cv2.VideoCapture(video_path)
 
 def calculate_angle(pt1, pt2, pt3):
 
@@ -79,7 +96,7 @@ def find_opposite_end_point(points, most_acute_index, perimeter):
 
     return opposite_end_index
 
-def crop_and_resize_image(input_image, target_size=(640, 640)):
+def crop_and_resize_image(input_image, flag, frame_num, target_size=(640, 640)):
     # Read the input image
     img = input_image
 
@@ -91,7 +108,10 @@ def crop_and_resize_image(input_image, target_size=(640, 640)):
     r = results[0]
     boxes = r.boxes.xyxy.tolist()
     if boxes == []:
-        return("Nothing to detect")
+        flag = 0
+        print("Nothing to detect")
+        print("time = ", frame_num/30)
+        return 0, flag
 
     xmin, ymin, xmax, ymax = boxes[0]
     xmin = int(xmin)
@@ -124,7 +144,8 @@ def crop_and_resize_image(input_image, target_size=(640, 640)):
 
     # Crop and resize the image
     cropped_resized_img = img[crop_ymin:crop_ymax, crop_xmin:crop_xmax]
-    return cropped_resized_img
+    print(frame_num/30)#time here
+    return cropped_resized_img, flag
 
 def generalizeLabel(cropped_img, cropped_label, img):
 
@@ -133,6 +154,7 @@ def generalizeLabel(cropped_img, cropped_label, img):
 
     original_label_list = []
     label_list = cropped_label
+    print(img_h, cropped_h)
 
     # If one of the images is the cropped version of the other
     if img_h > cropped_h:
@@ -151,7 +173,7 @@ def generalizeLabel(cropped_img, cropped_label, img):
         return original_label_list
 
 def predict(model=model, cap=cap):
-
+    
     frame_width = int(cap.get(3))
     frame_height = int(cap.get(4))
     
@@ -160,35 +182,44 @@ def predict(model=model, cap=cap):
     # Init list of all the coordinates
     XY = []
     XY_interpolated = []
+    frame_num = 0
 
     # loop through the video frames
-    while cap.isOpened():
+    while cap.isOpened() and frame_num<9999999:
         ret, frame = cap.read()
         # Apply contrast adjustment
         alpha = 1  # Contrast control (1.0 for no change)
         beta = 0     # Brightness control (0 for no change)
-
+        flag=1
         if ret:
             # run inference on a frame
-            frame_cropped = crop_and_resize_image(frame, (640,640))
-            frame_cropped_contrasted = cv2.convertScaleAbs(frame_cropped, alpha=alpha, beta=beta)
-            results = model(frame_cropped_contrasted)
+            frame_cropped, flag = crop_and_resize_image(frame, flag, frame_num, (640,640))
+            frame_num += 1
+            if flag == 1:
+                frame_cropped_contrasted = cv2.convertScaleAbs(frame_cropped, alpha=alpha, beta=beta)
+                results = model(frame_cropped_contrasted, conf=0.7)
 
-            # view results
-            for r in results:
-                if r.masks == None:
+                # view results
+                for r in results:
+                    if r.masks == None:
+                        # break
+                        print("fish not complete")
+                        XY.append([0])
+                    else:
+                        mask = r.masks.xy
+                        xys = mask[0]
+                        uncropped_xys = generalizeLabel(frame_cropped, xys, frame)
+                        #print(xys,uncropped_xys)
+                        XY.append(np.int32(uncropped_xys))
+                        cv2.polylines(frame, np.int32([uncropped_xys]), True, (0, 0, 255), 2)
+
+                cv2.imshow("img", frame)
+
+                #break the loop if 'q' is pressed
+                if cv2.waitKey(1) & 0xFF == ord("q"):
                     break
-                mask = r.masks.xy
-                xys = mask[0]
-                uncropped_xys = generalizeLabel(frame_cropped, xys, frame)
-                XY.append(np.int32(uncropped_xys))
-                cv2.polylines(frame, np.int32([uncropped_xys]), True, (0, 0, 255), 2)
-
-            cv2.imshow("img", frame)
-
-            #break the loop if 'q' is pressed
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                break
+            else:
+                XY.append([0])
         
         else:
             break
@@ -218,87 +249,104 @@ def predict(model=model, cap=cap):
 
     # Set the number of points the segmentation needs to be
     desired_points_count = 256          # power of 2
-    screenX, screenY = 2000, 1200
+    #screenX, screenY = 2000, 1200
+    screenX, screenY = 1280,768
     resX, resY = 2**8, 2**7
 
     count = 0
+    times = []
     # del XY[39]
     # del XY[393]
     print("number of points in the mask ", len(XY[0]))
     for xy in XY:
-        interpolated_f = np.zeros([desired_points_count,2])
+        if len(xy) > 1:
+            interpolated_f = np.zeros([desired_points_count,2])
 
-        # min_init_x = np.min(xy[:,0])
-        # rotation_init_index = np.where(xy[:,0] == min_init_x)[0]
-        # rotation_init_index = rotation_init_index.astype(np.int64)
+            # min_init_x = np.min(xy[:,0])
+            # rotation_init_index = np.where(xy[:,0] == min_init_x)[0]
+            # rotation_init_index = rotation_init_index.astype(np.int64)
 
-        perimeter = calculate_shape_perimeter(xy)
-        tail = find_most_acute_vertex(xy)
-        head = find_opposite_end_point(xy, tail, perimeter)
-        rotation_init_index = head
+            perimeter = calculate_shape_perimeter(xy)
+            tail = find_most_acute_vertex(xy)
+            head = find_opposite_end_point(xy, tail, perimeter)
+            rotation_init_index = head
 
-        x_interp = np.roll(xy[:,0], shift=-rotation_init_index, axis=0)
-        y_interp = np.roll(xy[:,1], shift=-rotation_init_index, axis=0)
-        # x_interp = xy[:,0]
-        # y_interp = xy[:,1]
+            x_interp = np.roll(xy[:,0], shift=-rotation_init_index, axis=0)
+            y_interp = np.roll(xy[:,1], shift=-rotation_init_index, axis=0)
+            # x_interp = xy[:,0]
+            # y_interp = xy[:,1]
 
-        def remove_duplicates(array1, array2):
-            combined_array = list(zip(array1, array2))
-            seen = {}
-            unique1 = []
-            unique2 = []
+            def remove_duplicates(array1, array2):
+                combined_array = list(zip(array1, array2))
+                seen = {}
+                unique1 = []
+                unique2 = []
 
-            for item in combined_array:
-                key = tuple(item)
-                if key not in seen:
-                    seen[key] = True
-                    unique1.append(item[0])
-                    unique2.append(item[1])
+                for item in combined_array:
+                    key = tuple(item)
+                    if key not in seen:
+                        seen[key] = True
+                        unique1.append(item[0])
+                        unique2.append(item[1])
 
-            return unique1, unique2
-        
-        x_interp, y_interp = remove_duplicates(x_interp, y_interp)
-        x_interp = np.r_[x_interp, x_interp[0]]
-        y_interp = np.r_[y_interp, y_interp[0]]
-        # fit splines to x=f(u) and y=g(u), treating both as periodic. also note that s=0
-        # is needed in order to force the spline fit to pass through all the input points.
-        tck, u = interpolate.splprep([x_interp, y_interp], s=len(x_interp)//4, per=True, k=1)
+                return unique1, unique2
+            
+            x_interp, y_interp = remove_duplicates(x_interp, y_interp)
+            x_interp = np.r_[x_interp, x_interp[0]]
+            y_interp = np.r_[y_interp, y_interp[0]]
+            # fit splines to x=f(u) and y=g(u), treating both as periodic. also note that s=0
+            # is needed in order to force the spline fit to pass through all the input points.
+            tck, u = interpolate.splprep([x_interp, y_interp], s=len(x_interp)//4, per=True, k=1)
 
-        # evaluate the spline fits for 100 evenly spaced distance values
-        xi, yi = interpolate.splev(np.linspace(0,1,2*desired_points_count), tck)
+            # evaluate the spline fits for 100 evenly spaced distance values
+            xi, yi = interpolate.splev(np.linspace(0,1,2*desired_points_count), tck)
 
-        # # Probably useless ----------------------------------------------------------
-        # min_x = np.min(xi)
-        # rotation_index = np.where(xi == min_x)[0]
-        # rotation_index = rotation_index.astype(np.int64)
-        # xi = np.roll(xi, shift=-rotation_index, axis=0)
-        # yi = np.roll(yi, shift=-rotation_index, axis=0)
+            # # Probably useless ----------------------------------------------------------
+            # min_x = np.min(xi)
+            # rotation_index = np.where(xi == min_x)[0]
+            # rotation_index = rotation_index.astype(np.int64)
+            # xi = np.roll(xi, shift=-rotation_index, axis=0)
+            # yi = np.roll(yi, shift=-rotation_index, axis=0)
 
-        xi0, yi0 = remove_duplicates(xi, yi)
-        xi0 = np.r_[xi0, xi0[0]]
-        yi0 = np.r_[yi0, yi0[0]]
-        # xi0, yi0 = np.array(xi), np.array(yi)
-        tck, _ = interpolate.splprep([xi0, yi0], s=len(xi0) // 4, per=True)
-        xi0, yi0 = interpolate.splev(np.linspace(0, 1, desired_points_count), tck)
-        print(count)
-        count += 1
-        # xi0, yi0 = xi0[:-1], yi0[:-1] 
+            xi0, yi0 = remove_duplicates(xi, yi)
+            xi0 = np.r_[xi0, xi0[0]]
+            yi0 = np.r_[yi0, yi0[0]]
+            # xi0, yi0 = np.array(xi), np.array(yi)
+            tck, _ = interpolate.splprep([xi0, yi0], s=len(xi0) // 4, per=True)
+            xi0, yi0 = interpolate.splev(np.linspace(0, 1, desired_points_count), tck)
+            print(count)
+            times.append(count/100)
+            count += 1
+            # xi0, yi0 = xi0[:-1], yi0[:-1] 
 
-        interpolated_f[:,0] = xi0*resX/screenX
-        interpolated_f[:,1] = yi0*resY/screenY
+            interpolated_f[:,0] = xi0*resX/screenX
+            interpolated_f[:,1] = yi0*resY/screenY
 
-        # Add the interpolated frame to the list
-        XY_interpolated.append(interpolated_f)
+            # Add the interpolated frame to the list
+            XY_interpolated.append(interpolated_f)
+
+        else:
+            print(count)
+            times.append(count/100)
+            count += 1
+
+            interpolated_f = np.zeros([desired_points_count,2])
+
+            # Add the interpolated frame to the list
+            XY_interpolated.append(interpolated_f)
 
     # Define the names for the output CSV files
     x_file = 'x.csv'
     y_file = 'y.csv'
     y_dot_file = 'y_dot.csv'
+    t_file = 't.csv'
 
     # Open the CSV files for writing
-    with open(x_file, 'w', newline='') as file1, open(y_file, 'w', newline='') as file2:
+    with open(x_file, 'w', newline='') as file1, open(y_file, 'w', newline='') as file2, open(t_file, 'w', newline='') as file3:
         writer1 = csv.writer(file1)
         writer2 = csv.writer(file2)
+        writer3 = csv.writer(file3)
+        writer3.writerow(times)
 
         # Iterate through the main list
         for i in range(desired_points_count):
@@ -309,8 +357,9 @@ def predict(model=model, cap=cap):
             # Write the columns to the respective CSV files
             writer1.writerow(columnX)
             writer2.writerow(columnY)
+            
 
-    print(f"CSV files {x_file} and {y_file} have been created.")
+    print(f"CSV files {x_file}, {y_file} and {t_file} have been created.")
 
     # Create a filtered Y to smooth the evolution in time and have a better derivative
     X_data = pd.read_csv("x.csv", header=None)
@@ -434,6 +483,6 @@ def fish_scan(h = 0.004, dt = 0.69, nu = 0.00095, f_ac = 100):
 
 
 if __name__ == "__main__":
-    # predict(model, cap)
-    # debug()
-    fish_scan()
+    predict(model, cap)
+    #debug()
+    #fish_scan()

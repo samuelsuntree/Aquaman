@@ -1,6 +1,13 @@
 from ultralytics import YOLO
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
+import csv
+import pandas as pd
+from numpy.polynomial import polynomial as pl
+from scipy import interpolate, signal, fft
+import pysindy as ps
+import os
 
 # ---------------------------------------------------------
 
@@ -8,10 +15,12 @@ import numpy as np
 
 # ---------------------------------------------------------
 
-model = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/train640_32_500_manuel/weights/best.pt")
-cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/testDetection.mp4")
+#model = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/train640_32_500_manuel/weights/best.pt")
+#cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/testDetection.mp4")
 # cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/zoomed.mp4")
 # cap = cv2.VideoCapture("E:/data_Bastien/datasetFish/video (2160p).mp4")
+model = YOLO("runs/segment/train640_32_500_manuel/weights/best.pt")
+path = "T4_Fish3_C2_270923 - Trim2.mp4"
 
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
