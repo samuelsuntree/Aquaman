@@ -8,6 +8,13 @@ from numpy.polynomial import polynomial as pl
 from scipy import interpolate, signal, fft
 import pysindy as ps
 import os
+import sys
+if len(sys.argv) > 1:
+    Vnum = int(sys.argv[1])  # Convert the first argument to an integer
+    print(f"Processing of the {Vnum}st file is on")
+else:
+    print("No parameter provided")
+    sys.exit(1)  # Exit the script if no parameter is provided
 
 ## Best model at the moment: train640_32_500_manuel
 #model2 = YOLO("C:/Users/blagn771/Documents/Aquaman/Aquaman/runs/segment/train640_32_500_manuel/weights/best.pt")
@@ -23,10 +30,12 @@ root_dir = os.path.join(os.getcwd())  # 如果脚本在'Aquaman/scripts'，回�
 model2_path = os.path.join(root_dir, "runs/segment/train640_32_500_manuel/weights/best.pt")
 model_path = os.path.join(root_dir, "runs/segment/bestProjet1a.pt")
 #video_path = os.path.join(root_dir, "T4_Fish3_C2_270923 - Trim2.mp4")
-#video_path = os.path.join(root_dir, "20cut1080.mp4")
+#video_path = os.path.join(root_dir, "20cutnew.mp4")
 #video_path = os.path.join(root_dir, "E:/fishlabel/19-40/converted_videos/converted_20.mp4")
-video_path = os.path.join(root_dir, "converted_35.mp4")
-
+#video_path = os.path.join(root_dir, "converted_35.mp4")
+output_path = os.path.join(root_dir, "output/")
+#Vnum = 35
+video_path = os.path.join(root_dir, f"converted_{Vnum}.mp4")
 # 加载模型
 model2 = YOLO(model2_path)
 model = YOLO(model_path)
@@ -158,7 +167,7 @@ def generalizeLabel(cropped_img, cropped_label, img):
 
     original_label_list = []
     label_list = cropped_label
-    print(img_h, cropped_h)
+    #print(img_h, cropped_h)
 
     # If one of the images is the cropped version of the other
     if img_h > cropped_h:
@@ -318,7 +327,7 @@ def predict(model=model, cap=cap):
             # xi0, yi0 = np.array(xi), np.array(yi)
             tck, _ = interpolate.splprep([xi0, yi0], s=len(xi0) // 4, per=True)
             xi0, yi0 = interpolate.splev(np.linspace(0, 1, desired_points_count), tck)
-            print(count)
+            #print(count)
             times.append(count/100)
             count += 1
             # xi0, yi0 = xi0[:-1], yi0[:-1] 
@@ -330,7 +339,7 @@ def predict(model=model, cap=cap):
             XY_interpolated.append(interpolated_f)
 
         else:
-            print(count)
+            #print(count)
             times.append(count/100)
             count += 1
 
@@ -340,8 +349,11 @@ def predict(model=model, cap=cap):
             XY_interpolated.append(interpolated_f)
 
     # Define the names for the output CSV files
-    x_file = 'x.csv'
-    y_file = 'y.csv'
+    #x_file = 'x.csv'
+    #y_file = 'y.csv'
+    '''
+    x_file = f'{output_path}/x_{Vnum}.csv'
+    y_file = f'{output_path}/y_{Vnum}.csv'
     y_dot_file = 'y_dot.csv'
     t_file = 't.csv'
 
@@ -366,8 +378,8 @@ def predict(model=model, cap=cap):
     print(f"CSV files {x_file}, {y_file} and {t_file} have been created.")
 
     # Create a filtered Y to smooth the evolution in time and have a better derivative
-    X_data = pd.read_csv("x.csv", header=None)
-    Y_data = pd.read_csv("y.csv", header=None)
+    X_data = pd.read_csv(f"{output_path}/x_{Vnum}.csv", header=None)
+    Y_data = pd.read_csv(f"{output_path}/y_{Vnum}.csv", header=None)
     y_dot = pd.DataFrame(index=range(len(Y_data[0])), columns=range(len(Y_data.columns)))
 
     sfd = ps.SmoothedFiniteDifference(smoother_kws={'window_length': 11}) # pySINDy smooth finite differenciation
@@ -393,13 +405,62 @@ def predict(model=model, cap=cap):
             writer.writerow(columnFilteredY)
 
     print(f"CSV files {y_dot_file} has been created.")
+'''
+    x_file = f'{output_path}/x_{Vnum}.csv'
+    y_file = f'{output_path}/y_{Vnum}.csv'
+    #y_dot_file = 'y_dot.csv'  # This should be commented out if not used
+    t_file = f'{output_path}/t_{Vnum}.csv'
 
+    # Open the CSV files for writing
+    with open(x_file, 'w', newline='') as file1, open(y_file, 'w', newline='') as file2, open(t_file, 'w', newline='') as file3:
+        writer1 = csv.writer(file1)
+        writer2 = csv.writer(file2)
+        writer3 = csv.writer(file3)
+        writer3.writerow(times)
+
+        # Iterate through the main list
+        for i in range(desired_points_count):
+            columnX = [round(item[i][0], 2) for item in XY_interpolated]
+            columnY = [round(item[i][1], 2) for item in XY_interpolated]
+
+            writer1.writerow(columnX)
+            writer2.writerow(columnY)
+            
+    print(f"CSV files {x_file}, {y_file} and {t_file} have been created.")
+
+    # Comment out Y derivative processing
+    # Create a filtered Y to smooth the evolution in time and have a better derivative
+    # X_data = pd.read_csv(f"{output_path}/x_{Vnum}.csv", header=None)
+    # Y_data = pd.read_csv(f"{output_path}/y_{Vnum}.csv", header=None)
+    # y_dot = pd.DataFrame(index=range(len(Y_data[0])), columns=range(len(Y_data.columns)))
+
+    # sfd = ps.SmoothedFiniteDifference(smoother_kws={'window_length': 11})  # pySINDy smooth finite differentiation
+    # T0 = np.array([0.5 + j / 2 for j in range(len(Y_data.columns))])  # time vector for the derivation
+    # for i in range(len(Y_data[0])):
+    #     y0 = [Y_data[j][i] for j in range(len(Y_data.columns))]
+    #     y_dot0 = sfd._differentiate(y0, T0)
+    #     for j in range(len(Y_data.columns)):
+    #         y_dot[j][i] = y_dot0[j]
+
+    # # Open the CSV file for writing y_dot
+    # with open(y_dot_file, 'w', newline='') as file:
+    #     writer = csv.writer(file)
+
+    #     # Iterate through the main list
+    #     for i in range(desired_points_count):
+    #         columnFilteredY = []
+    #         for j in range(len(Y_data.columns)):
+    #             columnFilteredY.append(y_dot[j][i])
+
+    #         writer.writerow(columnFilteredY)
+
+    # print(f"CSV file {y_dot_file} has been created.")
 
 def debug():
 
     fig, ax = plt.subplots()
-    X_data = pd.read_csv("x.csv", header=None)
-    Y_data = pd.read_csv("y.csv", header=None)
+    X_data = pd.read_csv(f"{output_path}/x_{Vnum}.csv", header=None)
+    Y_data = pd.read_csv(f"{output_path}/y_{Vnum}.csv", header=None)
 
     for i in range(len(X_data.columns)):
         ax.clear()
@@ -420,9 +481,9 @@ def fish_scan(h = 0.004, dt = 0.69, nu = 0.00095, f_ac = 100):
 
     fig = plt.figure()
     ax = fig.add_subplot(1,2,1)
-    X_data = pd.read_csv("x.csv", header=None)
+    X_data = pd.read_csv(f"{output_path}/x_{Vnum}.csv", header=None)
     N = len(X_data.columns)
-    Y_data = pd.read_csv("y.csv", header=None)
+    Y_data = pd.read_csv(f"{output_path}/y_{Vnum}.csv", header=None)
     T = np.linspace(0, N/f_ac,N)
     tail_pos, head_pos = [], []
 
