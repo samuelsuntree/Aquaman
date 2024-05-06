@@ -15,7 +15,8 @@ import os
 ## cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/testDetection.mp4")
 #cap = cv2.VideoCapture("C:/Users/blagn771/Desktop/FishDataset/videoNadia/T3_Fish3_C2_270923 - Trim2.mp4")
 
-# 定义根目录相对于当前脚本的路径
+
+
 root_dir = os.path.join(os.getcwd())  # 如果脚本在'Aquaman/scripts'，回溯到'Aquaman'
 
 # 定义模型和视频文件的相对路径
@@ -23,7 +24,8 @@ model2_path = os.path.join(root_dir, "runs/segment/train640_32_500_manuel/weight
 model_path = os.path.join(root_dir, "runs/segment/bestProjet1a.pt")
 #video_path = os.path.join(root_dir, "T4_Fish3_C2_270923 - Trim2.mp4")
 #video_path = os.path.join(root_dir, "20cut1080.mp4")
-video_path = os.path.join(root_dir, "E:/fishlabel/19-40/converted_videos/converted_20.mp4")
+#video_path = os.path.join(root_dir, "E:/fishlabel/19-40/converted_videos/converted_20.mp4")
+video_path = os.path.join(root_dir, "converted_35.mp4")
 
 # 加载模型
 model2 = YOLO(model2_path)
@@ -31,6 +33,8 @@ model = YOLO(model_path)
 
 # 打开视频文件
 cap = cv2.VideoCapture(video_path)
+
+
 
 def calculate_angle(pt1, pt2, pt3):
 
@@ -483,6 +487,26 @@ def fish_scan(h = 0.004, dt = 0.69, nu = 0.00095, f_ac = 100):
 
 
 if __name__ == "__main__":
+    
+
     predict(model, cap)
     #debug()
     #fish_scan()
+
+
+
+'''
+def process_video(video_path, output_folder):
+    predict(model, cap)
+    
+    # 生成 CSV 文件，并保存在 output_folder 中
+    # 返回生成的 CSV 文件路径列表，示例
+    return ['path_to_x.csv', 'path_to_y.csv', 'path_to_t.csv', 'path_to_ydot.csv']
+
+# 确保不会在模块导入时执行，仅在直接运行时执行
+if __name__ == '__main__':
+    import sys
+    video_path = sys.argv[1]  # 从命令行参数获取视频路径
+    output_folder = sys.argv[2]  # 从命令行参数获取输出文件夹路径
+    process_video(video_path, output_folder)
+'''
