@@ -10,7 +10,7 @@ mkdir "!logfolder!"
 
 CALL C:\ProgramData\anaconda3\condabin\activate.bat aquaman
 
-FOR /L %%i IN (1,1,2) DO (
+FOR /L %%i IN (1,1,40) DO (
    python YOLO2CSV.py %%i | tee "!logfolder!\log_%%i.txt"
 )
 
