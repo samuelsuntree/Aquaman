@@ -1,0 +1,878 @@
+Processing of the 2st file is on
+
+0: 384x640 1 fish, 62.4ms
+Speed: 17.1ms preprocess, 62.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.0
+
+0: 1280x1280 1 fish, 251.9ms
+Speed: 15.7ms preprocess, 251.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 36.7ms
+Speed: 10.0ms preprocess, 36.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.03333333333333333
+
+0: 1280x1280 1 fish, 215.7ms
+Speed: 23.0ms preprocess, 215.7ms inference, 15.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 62.5ms
+Speed: 0.0ms preprocess, 62.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.06666666666666667
+
+0: 1280x1280 1 fish, 226.3ms
+Speed: 0.0ms preprocess, 226.3ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 50.8ms
+Speed: 0.0ms preprocess, 50.8ms inference, 0.5ms postprocess per image at shape (1, 3, 384, 640)
+0.1
+
+0: 1280x1280 1 fish, 217.7ms
+Speed: 3.4ms preprocess, 217.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 58.8ms
+Speed: 0.0ms preprocess, 58.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.13333333333333333
+
+0: 1280x1280 1 fish, 231.4ms
+Speed: 0.0ms preprocess, 231.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 53.6ms
+Speed: 0.0ms preprocess, 53.6ms inference, 1.0ms postprocess per image at shape (1, 3, 384, 640)
+0.16666666666666666
+
+0: 1280x1280 1 fish, 223.5ms
+Speed: 9.5ms preprocess, 223.5ms inference, 4.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.5ms
+Speed: 1.9ms preprocess, 45.5ms inference, 2.2ms postprocess per image at shape (1, 3, 384, 640)
+0.2
+
+0: 1280x1280 1 fish, 220.2ms
+Speed: 9.0ms preprocess, 220.2ms inference, 8.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 43.4ms
+Speed: 0.0ms preprocess, 43.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.23333333333333334
+
+0: 1280x1280 1 fish, 205.5ms
+Speed: 15.7ms preprocess, 205.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 44.0ms
+Speed: 0.0ms preprocess, 44.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.26666666666666666
+
+0: 1280x1280 1 fish, 209.1ms
+Speed: 9.9ms preprocess, 209.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.0ms
+Speed: 0.0ms preprocess, 48.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.3
+
+0: 1280x1280 1 fish, 220.7ms
+Speed: 0.0ms preprocess, 220.7ms inference, 16.8ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.6ms
+Speed: 0.0ms preprocess, 48.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.3333333333333333
+
+0: 1280x1280 1 fish, 221.1ms
+Speed: 15.2ms preprocess, 221.1ms inference, 4.9ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.4ms
+Speed: 0.0ms preprocess, 46.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.36666666666666664
+
+0: 1280x1280 1 fish, 206.8ms
+Speed: 15.0ms preprocess, 206.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.9ms
+Speed: 0.0ms preprocess, 46.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.4
+
+0: 1280x1280 1 fish, 220.3ms
+Speed: 8.6ms preprocess, 220.3ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 43.3ms
+Speed: 0.0ms preprocess, 43.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.43333333333333335
+
+0: 1280x1280 1 fish, 221.0ms
+Speed: 15.6ms preprocess, 221.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.2ms
+Speed: 0.0ms preprocess, 46.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.4666666666666667
+
+0: 1280x1280 1 fish, 226.7ms
+Speed: 17.4ms preprocess, 226.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.1ms
+Speed: 3.3ms preprocess, 42.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.5
+
+0: 1280x1280 1 fish, 230.0ms
+Speed: 15.6ms preprocess, 230.0ms inference, 7.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.7ms
+Speed: 0.0ms preprocess, 45.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.5333333333333333
+
+0: 1280x1280 1 fish, 218.9ms
+Speed: 0.0ms preprocess, 218.9ms inference, 14.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.0ms
+Speed: 0.0ms preprocess, 47.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.5666666666666667
+
+0: 1280x1280 1 fish, 220.2ms
+Speed: 16.5ms preprocess, 220.2ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 50.1ms
+Speed: 0.0ms preprocess, 50.1ms inference, 2.3ms postprocess per image at shape (1, 3, 384, 640)
+0.6
+
+0: 1280x1280 1 fish, 223.3ms
+Speed: 9.0ms preprocess, 223.3ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.6ms
+Speed: 0.0ms preprocess, 46.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.6333333333333333
+
+0: 1280x1280 1 fish, 222.1ms
+Speed: 15.6ms preprocess, 222.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.0ms
+Speed: 0.0ms preprocess, 48.0ms inference, 15.0ms postprocess per image at shape (1, 3, 384, 640)
+0.6666666666666666
+
+0: 1280x1280 1 fish, 253.4ms
+Speed: 0.0ms preprocess, 253.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.6ms
+Speed: 0.0ms preprocess, 48.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.7
+
+0: 1280x1280 1 fish, 255.0ms
+Speed: 15.0ms preprocess, 255.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 52.4ms
+Speed: 0.0ms preprocess, 52.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.7333333333333333
+
+0: 1280x1280 1 fish, 270.1ms
+Speed: 7.6ms preprocess, 270.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 54.0ms
+Speed: 0.0ms preprocess, 54.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.7666666666666667
+
+0: 1280x1280 1 fish, 248.1ms
+Speed: 5.5ms preprocess, 248.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.3ms
+Speed: 0.0ms preprocess, 47.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.8
+
+0: 1280x1280 1 fish, 253.8ms
+Speed: 17.0ms preprocess, 253.8ms inference, 5.3ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.9ms
+Speed: 6.2ms preprocess, 48.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.8333333333333334
+
+0: 1280x1280 1 fish, 254.0ms
+Speed: 0.0ms preprocess, 254.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.9ms
+Speed: 0.0ms preprocess, 46.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.8666666666666667
+
+0: 1280x1280 1 fish, 253.9ms
+Speed: 16.0ms preprocess, 253.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 62.5ms
+Speed: 0.0ms preprocess, 62.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.9
+
+0: 1280x1280 1 fish, 251.3ms
+Speed: 0.0ms preprocess, 251.3ms inference, 16.8ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.5ms
+Speed: 0.0ms preprocess, 47.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.9333333333333333
+
+0: 1280x1280 1 fish, 253.9ms
+Speed: 1.4ms preprocess, 253.9ms inference, 5.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.8ms
+Speed: 0.0ms preprocess, 46.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+0.9666666666666667
+
+0: 1280x1280 1 fish, 252.7ms
+Speed: 16.2ms preprocess, 252.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.1ms
+Speed: 5.0ms preprocess, 42.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.0
+
+0: 1280x1280 1 fish, 241.9ms
+Speed: 16.3ms preprocess, 241.9ms inference, 12.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.1ms
+Speed: 0.0ms preprocess, 46.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.0333333333333334
+
+0: 1280x1280 1 fish, 269.5ms
+Speed: 1.2ms preprocess, 269.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 55.1ms
+Speed: 0.0ms preprocess, 55.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.0666666666666667
+
+0: 1280x1280 1 fish, 250.4ms
+Speed: 11.5ms preprocess, 250.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.5ms
+Speed: 0.0ms preprocess, 46.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.1
+
+0: 1280x1280 1 fish, 252.6ms
+Speed: 0.0ms preprocess, 252.6ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.3ms
+Speed: 0.0ms preprocess, 48.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.1333333333333333
+
+0: 1280x1280 1 fish, 256.7ms
+Speed: 1.0ms preprocess, 256.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.1ms
+Speed: 0.0ms preprocess, 42.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.1666666666666667
+
+0: 1280x1280 1 fish, 254.0ms
+Speed: 0.0ms preprocess, 254.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 41.3ms
+Speed: 0.0ms preprocess, 41.3ms inference, 16.7ms postprocess per image at shape (1, 3, 384, 640)
+1.2
+
+0: 1280x1280 1 fish, 253.5ms
+Speed: 0.0ms preprocess, 253.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 51.0ms
+Speed: 0.0ms preprocess, 51.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.2333333333333334
+
+0: 1280x1280 1 fish, 238.5ms
+Speed: 12.5ms preprocess, 238.5ms inference, 16.3ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 39.8ms
+Speed: 1.0ms preprocess, 39.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.2666666666666666
+
+0: 1280x1280 1 fish, 258.4ms
+Speed: 16.6ms preprocess, 258.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.4ms
+Speed: 0.0ms preprocess, 45.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.3
+
+0: 1280x1280 1 fish, 256.2ms
+Speed: 1.1ms preprocess, 256.2ms inference, 2.8ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 56.6ms
+Speed: 0.0ms preprocess, 56.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.3333333333333333
+
+0: 1280x1280 1 fish, 243.7ms
+Speed: 9.9ms preprocess, 243.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.8ms
+Speed: 5.0ms preprocess, 42.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.3666666666666667
+
+0: 1280x1280 1 fish, 236.6ms
+Speed: 15.6ms preprocess, 236.6ms inference, 15.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 41.4ms
+Speed: 5.7ms preprocess, 41.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.4
+
+0: 1280x1280 1 fish, 248.8ms
+Speed: 21.2ms preprocess, 248.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.9ms
+Speed: 4.3ms preprocess, 42.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.4333333333333333
+
+0: 1280x1280 1 fish, 237.9ms
+Speed: 15.0ms preprocess, 237.9ms inference, 16.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 50.7ms
+Speed: 0.0ms preprocess, 50.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.4666666666666666
+
+0: 1280x1280 1 fish, 234.9ms
+Speed: 7.0ms preprocess, 234.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.5ms
+Speed: 0.0ms preprocess, 48.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.5
+
+0: 1280x1280 1 fish, 253.1ms
+Speed: 16.2ms preprocess, 253.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.2ms
+Speed: 0.0ms preprocess, 42.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.5333333333333334
+
+0: 1280x1280 1 fish, 254.1ms
+Speed: 16.7ms preprocess, 254.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.7ms
+Speed: 0.0ms preprocess, 47.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.5666666666666667
+
+0: 1280x1280 1 fish, 239.0ms
+Speed: 15.0ms preprocess, 239.0ms inference, 15.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 54.0ms
+Speed: 0.0ms preprocess, 54.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.6
+
+0: 1280x1280 1 fish, 236.0ms
+Speed: 12.4ms preprocess, 236.0ms inference, 14.7ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 49.0ms
+Speed: 0.0ms preprocess, 49.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.6333333333333333
+
+0: 1280x1280 1 fish, 263.8ms
+Speed: 0.0ms preprocess, 263.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 52.6ms
+Speed: 0.0ms preprocess, 52.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.6666666666666667
+
+0: 1280x1280 1 fish, 254.4ms
+Speed: 0.0ms preprocess, 254.4ms inference, 7.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.2ms
+Speed: 0.0ms preprocess, 47.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.7
+
+0: 1280x1280 1 fish, 238.5ms
+Speed: 0.7ms preprocess, 238.5ms inference, 15.3ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 40.3ms
+Speed: 7.0ms preprocess, 40.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.7333333333333334
+
+0: 1280x1280 1 fish, 240.9ms
+Speed: 7.6ms preprocess, 240.9ms inference, 8.9ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 58.5ms
+Speed: 0.0ms preprocess, 58.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.7666666666666666
+
+0: 1280x1280 1 fish, 229.3ms
+Speed: 12.4ms preprocess, 229.3ms inference, 16.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.0ms
+Speed: 2.0ms preprocess, 45.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.8
+
+0: 1280x1280 1 fish, 251.7ms
+Speed: 12.8ms preprocess, 251.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.0ms
+Speed: 0.0ms preprocess, 48.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.8333333333333333
+
+0: 1280x1280 1 fish, 252.8ms
+Speed: 0.0ms preprocess, 252.8ms inference, 4.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.8ms
+Speed: 0.0ms preprocess, 47.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.8666666666666667
+
+0: 1280x1280 1 fish, 249.8ms
+Speed: 19.8ms preprocess, 249.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 57.0ms
+Speed: 0.0ms preprocess, 57.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.9
+
+0: 1280x1280 1 fish, 243.7ms
+Speed: 7.1ms preprocess, 243.7ms inference, 9.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.6ms
+Speed: 0.0ms preprocess, 48.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+1.9333333333333333
+
+0: 1280x1280 1 fish, 253.2ms
+Speed: 14.5ms preprocess, 253.2ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.2ms
+Speed: 0.0ms preprocess, 46.2ms inference, 12.1ms postprocess per image at shape (1, 3, 384, 640)
+1.9666666666666666
+
+0: 1280x1280 1 fish, 238.7ms
+Speed: 11.5ms preprocess, 238.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 43.3ms
+Speed: 1.0ms preprocess, 43.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.0
+
+0: 1280x1280 1 fish, 251.8ms
+Speed: 15.7ms preprocess, 251.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.9ms
+Speed: 4.1ms preprocess, 48.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.033333333333333
+
+0: 1280x1280 1 fish, 254.7ms
+Speed: 12.2ms preprocess, 254.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 63.5ms
+Speed: 0.0ms preprocess, 63.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.066666666666667
+
+0: 1280x1280 1 fish, 244.5ms
+Speed: 4.5ms preprocess, 244.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.6ms
+Speed: 4.4ms preprocess, 42.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.1
+
+0: 1280x1280 1 fish, 253.2ms
+Speed: 17.6ms preprocess, 253.2ms inference, 3.7ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.7ms
+Speed: 0.0ms preprocess, 47.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.1333333333333333
+
+0: 1280x1280 1 fish, 249.8ms
+Speed: 20.5ms preprocess, 249.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.5ms
+Speed: 0.0ms preprocess, 47.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.1666666666666665
+
+0: 1280x1280 1 fish, 250.9ms
+Speed: 17.6ms preprocess, 250.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 53.9ms
+Speed: 1.1ms preprocess, 53.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.2
+
+0: 1280x1280 1 fish, 243.0ms
+Speed: 6.0ms preprocess, 243.0ms inference, 9.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.4ms
+Speed: 0.0ms preprocess, 46.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.2333333333333334
+
+0: 1280x1280 1 fish, 262.4ms
+Speed: 7.3ms preprocess, 262.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 50.7ms
+Speed: 0.0ms preprocess, 50.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.2666666666666666
+
+0: 1280x1280 1 fish, 235.0ms
+Speed: 15.1ms preprocess, 235.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.0ms
+Speed: 0.0ms preprocess, 47.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.3
+
+0: 1280x1280 1 fish, 254.0ms
+Speed: 15.6ms preprocess, 254.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 52.3ms
+Speed: 0.0ms preprocess, 52.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.3333333333333335
+
+0: 1280x1280 1 fish, 251.8ms
+Speed: 1.3ms preprocess, 251.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.5ms
+Speed: 0.0ms preprocess, 48.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.3666666666666667
+
+0: 1280x1280 1 fish, 234.1ms
+Speed: 18.0ms preprocess, 234.1ms inference, 17.9ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.5ms
+Speed: 0.0ms preprocess, 47.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.4
+
+0: 1280x1280 1 fish, 238.5ms
+Speed: 15.9ms preprocess, 238.5ms inference, 16.4ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.5ms
+Speed: 0.0ms preprocess, 45.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.433333333333333
+
+0: 1280x1280 1 fish, 252.9ms
+Speed: 16.4ms preprocess, 252.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.6ms
+Speed: 0.0ms preprocess, 46.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.466666666666667
+
+0: 1280x1280 1 fish, 250.8ms
+Speed: 5.0ms preprocess, 250.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.5ms
+Speed: 0.0ms preprocess, 47.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.5
+
+0: 1280x1280 1 fish, 235.7ms
+Speed: 19.2ms preprocess, 235.7ms inference, 15.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.0ms
+Speed: 0.0ms preprocess, 47.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.533333333333333
+
+0: 1280x1280 1 fish, 243.2ms
+Speed: 16.5ms preprocess, 243.2ms inference, 11.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 49.4ms
+Speed: 0.0ms preprocess, 49.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.566666666666667
+
+0: 1280x1280 1 fish, 253.1ms
+Speed: 0.0ms preprocess, 253.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 49.6ms
+Speed: 0.0ms preprocess, 49.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.6
+
+0: 1280x1280 1 fish, 238.6ms
+Speed: 12.7ms preprocess, 238.6ms inference, 15.3ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.0ms
+Speed: 0.0ms preprocess, 45.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.6333333333333333
+
+0: 1280x1280 1 fish, 252.7ms
+Speed: 0.8ms preprocess, 252.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.6ms
+Speed: 0.0ms preprocess, 48.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.6666666666666665
+
+0: 1280x1280 1 fish, 237.1ms
+Speed: 15.6ms preprocess, 237.1ms inference, 15.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.8ms
+Speed: 1.6ms preprocess, 42.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.7
+
+0: 1280x1280 1 fish, 251.5ms
+Speed: 19.4ms preprocess, 251.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 54.5ms
+Speed: 0.0ms preprocess, 54.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.7333333333333334
+
+0: 1280x1280 1 fish, 254.7ms
+Speed: 11.3ms preprocess, 254.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 49.8ms
+Speed: 0.0ms preprocess, 49.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.7666666666666666
+
+0: 1280x1280 1 fish, 253.0ms
+Speed: 10.5ms preprocess, 253.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.2ms
+Speed: 0.0ms preprocess, 47.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.8
+
+0: 1280x1280 1 fish, 239.1ms
+Speed: 16.7ms preprocess, 239.1ms inference, 13.2ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.7ms
+Speed: 5.7ms preprocess, 48.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.8333333333333335
+
+0: 1280x1280 1 fish, 256.9ms
+Speed: 0.0ms preprocess, 256.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.9ms
+Speed: 0.0ms preprocess, 46.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.8666666666666667
+
+0: 1280x1280 1 fish, 251.7ms
+Speed: 19.6ms preprocess, 251.7ms inference, 1.1ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 44.9ms
+Speed: 0.0ms preprocess, 44.9ms inference, 16.0ms postprocess per image at shape (1, 3, 384, 640)
+2.9
+
+0: 1280x1280 1 fish, 254.4ms
+Speed: 0.0ms preprocess, 254.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.3ms
+Speed: 0.0ms preprocess, 48.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.933333333333333
+
+0: 1280x1280 1 fish, 253.8ms
+Speed: 15.0ms preprocess, 253.8ms inference, 10.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.3ms
+Speed: 0.0ms preprocess, 47.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+2.966666666666667
+
+0: 1280x1280 1 fish, 246.5ms
+Speed: 20.5ms preprocess, 246.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 59.7ms
+Speed: 0.0ms preprocess, 59.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.0
+
+0: 1280x1280 1 fish, 244.2ms
+Speed: 9.2ms preprocess, 244.2ms inference, 2.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.2ms
+Speed: 0.0ms preprocess, 47.2ms inference, 11.5ms postprocess per image at shape (1, 3, 384, 640)
+3.033333333333333
+
+0: 1280x1280 1 fish, 253.7ms
+Speed: 4.5ms preprocess, 253.7ms inference, 0.8ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.9ms
+Speed: 0.0ms preprocess, 47.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.066666666666667
+
+0: 1280x1280 1 fish, 255.4ms
+Speed: 0.0ms preprocess, 255.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.5ms
+Speed: 0.0ms preprocess, 47.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.1
+
+0: 1280x1280 1 fish, 248.4ms
+Speed: 1.3ms preprocess, 248.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.9ms
+Speed: 0.0ms preprocess, 47.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.1333333333333333
+
+0: 1280x1280 1 fish, 250.0ms
+Speed: 19.2ms preprocess, 250.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.2ms
+Speed: 0.0ms preprocess, 46.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.1666666666666665
+
+0: 1280x1280 1 fish, 253.0ms
+Speed: 16.4ms preprocess, 253.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.0ms
+Speed: 0.0ms preprocess, 47.0ms inference, 15.6ms postprocess per image at shape (1, 3, 384, 640)
+3.2
+
+0: 1280x1280 1 fish, 256.8ms
+Speed: 0.0ms preprocess, 256.8ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.6ms
+Speed: 0.0ms preprocess, 46.6ms inference, 15.6ms postprocess per image at shape (1, 3, 384, 640)
+3.2333333333333334
+
+0: 1280x1280 1 fish, 256.0ms
+Speed: 0.0ms preprocess, 256.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.1ms
+Speed: 0.0ms preprocess, 47.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.2666666666666666
+
+0: 1280x1280 1 fish, 253.7ms
+Speed: 3.7ms preprocess, 253.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.0ms
+Speed: 0.0ms preprocess, 45.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.3
+
+0: 1280x1280 1 fish, 252.2ms
+Speed: 2.2ms preprocess, 252.2ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 42.9ms
+Speed: 0.0ms preprocess, 42.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.3333333333333335
+
+0: 1280x1280 1 fish, 248.0ms
+Speed: 5.5ms preprocess, 248.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 57.5ms
+Speed: 0.0ms preprocess, 57.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.3666666666666667
+
+0: 1280x1280 1 fish, 247.2ms
+Speed: 11.6ms preprocess, 247.2ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 41.1ms
+Speed: 6.6ms preprocess, 41.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.4
+
+0: 1280x1280 1 fish, 255.7ms
+Speed: 3.4ms preprocess, 255.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 41.9ms
+Speed: 0.0ms preprocess, 41.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.433333333333333
+
+0: 1280x1280 1 fish, 260.2ms
+Speed: 15.9ms preprocess, 260.2ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 47.3ms
+Speed: 0.0ms preprocess, 47.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.466666666666667
+
+0: 1280x1280 1 fish, 248.7ms
+Speed: 5.5ms preprocess, 248.7ms inference, 4.1ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 43.4ms
+Speed: 0.0ms preprocess, 43.4ms inference, 15.6ms postprocess per image at shape (1, 3, 384, 640)
+3.5
+
+0: 1280x1280 1 fish, 246.4ms
+Speed: 4.0ms preprocess, 246.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 52.0ms
+Speed: 0.0ms preprocess, 52.0ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.533333333333333
+
+0: 1280x1280 1 fish, 252.4ms
+Speed: 0.0ms preprocess, 252.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 40.7ms
+Speed: 0.0ms preprocess, 40.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.566666666666667
+
+0: 1280x1280 1 fish, 244.1ms
+Speed: 24.7ms preprocess, 244.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 57.8ms
+Speed: 0.0ms preprocess, 57.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.6
+
+0: 1280x1280 1 fish, 255.5ms
+Speed: 5.5ms preprocess, 255.5ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 63.1ms
+Speed: 1.8ms preprocess, 63.1ms inference, 8.5ms postprocess per image at shape (1, 3, 384, 640)
+3.6333333333333333
+
+0: 1280x1280 1 fish, 259.3ms
+Speed: 0.0ms preprocess, 259.3ms inference, 10.7ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 50.3ms
+Speed: 0.0ms preprocess, 50.3ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.6666666666666665
+
+0: 1280x1280 1 fish, 268.1ms
+Speed: 0.0ms preprocess, 268.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.5ms
+Speed: 0.0ms preprocess, 46.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.7
+
+0: 1280x1280 1 fish, 252.5ms
+Speed: 8.5ms preprocess, 252.5ms inference, 10.4ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.4ms
+Speed: 0.0ms preprocess, 46.4ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.7333333333333334
+
+0: 1280x1280 1 fish, 249.0ms
+Speed: 9.2ms preprocess, 249.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.9ms
+Speed: 0.0ms preprocess, 48.9ms inference, 10.0ms postprocess per image at shape (1, 3, 384, 640)
+3.7666666666666666
+
+0: 1280x1280 1 fish, 237.6ms
+Speed: 15.7ms preprocess, 237.6ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 55.1ms
+Speed: 0.0ms preprocess, 55.1ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.8
+
+0: 1280x1280 1 fish, 253.0ms
+Speed: 8.3ms preprocess, 253.0ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 60.7ms
+Speed: 0.0ms preprocess, 60.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.8333333333333335
+
+0: 1280x1280 1 fish, 254.6ms
+Speed: 12.5ms preprocess, 254.6ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.6ms
+Speed: 1.6ms preprocess, 45.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.8666666666666667
+
+0: 1280x1280 1 fish, 244.8ms
+Speed: 10.5ms preprocess, 244.8ms inference, 5.6ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 45.5ms
+Speed: 0.0ms preprocess, 45.5ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.9
+
+0: 1280x1280 1 fish, 245.9ms
+Speed: 23.0ms preprocess, 245.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 44.2ms
+Speed: 0.0ms preprocess, 44.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.933333333333333
+
+0: 1280x1280 1 fish, 238.1ms
+Speed: 15.6ms preprocess, 238.1ms inference, 16.5ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 49.9ms
+Speed: 0.0ms preprocess, 49.9ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+3.966666666666667
+
+0: 1280x1280 1 fish, 245.4ms
+Speed: 7.5ms preprocess, 245.4ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.4ms
+Speed: 0.0ms preprocess, 46.4ms inference, 15.0ms postprocess per image at shape (1, 3, 384, 640)
+4.0
+
+0: 1280x1280 1 fish, 254.1ms
+Speed: 0.0ms preprocess, 254.1ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 48.6ms
+Speed: 0.0ms preprocess, 48.6ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+4.033333333333333
+
+0: 1280x1280 1 fish, 247.7ms
+Speed: 21.1ms preprocess, 247.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 60.2ms
+Speed: 0.0ms preprocess, 60.2ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+4.066666666666666
+
+0: 1280x1280 1 fish, 253.7ms
+Speed: 15.8ms preprocess, 253.7ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 46.7ms
+Speed: 0.0ms preprocess, 46.7ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+4.1
+
+0: 1280x1280 1 fish, 258.9ms
+Speed: 0.0ms preprocess, 258.9ms inference, 0.0ms postprocess per image at shape (1, 3, 1280, 1280)
+
+0: 384x640 1 fish, 44.8ms
+Speed: 0.0ms preprocess, 44.8ms inference, 0.0ms postprocess per image at shape (1, 3, 384, 640)
+4.133333333333334
+
+0: 1280x1280 1 fish, 228.3ms
+Speed: 9.0ms preprocess, 228.3ms inference, 15.6ms postprocess per image at shape (1, 3, 1280, 1280)
+number of points in the mask  446
+CSV files C:\Users\10521\Documents\GitHub\Aquaman\output//x_2.csv, C:\Users\10521\Documents\GitHub\Aquaman\output//y_2.csv and C:\Users\10521\Documents\GitHub\Aquaman\output//t_2.csv have been created.
