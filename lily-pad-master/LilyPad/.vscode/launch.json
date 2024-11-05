@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Debug (Launch)",
+        "request": "launch",
+        "mainClass": "LilyPad",  // 你的主类名
+        "projectName": "YourProjectName"  // 项目名（可选）
+      }
+    ]
+  }
+  

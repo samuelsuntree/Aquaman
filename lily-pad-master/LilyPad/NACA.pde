@@ -31,7 +31,7 @@ class NACA extends Body{
       float xx = pow(i/(float)m,2);
       add(xc.x+c*(xx-pivot),xc.y-t*c*offset(xx));
     }
-    end(); // finalizes shape
+    end(true,true); // finalizes shape
     this.m = m;
     this.c = c;
     FoilArea = t*c*0.685084;    //crossectional area of NACA foil

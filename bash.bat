@@ -1,10 +1,10 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: 获取当前日期和时间
+:: fetch date and time
 set "timestamp=%date:~-4%%date:~3,2%%date:~0,2%_%time:~0,2%%time:~3,2%"
 
-:: 创建一个包含时间戳的日志文件夹，放在当前目录下
+:: create the folder
 set "logfolder=%CD%\output\Logs\Log_%timestamp%"
 mkdir "!logfolder!"
 

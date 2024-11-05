@@ -98,6 +98,11 @@ class Body extends AbstractBody{
         box.add(mn.x + 3, mx.y);
         box.add(mx.x, mx.y);
         box.add(mx.x, mn.y);
+        // box.add(1, 1);
+        // box.add(1, 127);
+        // box.add(255, 127);
+        // box.add(255, 1);
+        //box.add(mx.x+10, mn.y-10);
       }
       box.end();
     }
@@ -158,7 +163,7 @@ class Body extends AbstractBody{
     display(C, window);
   }
   void display( color C, Window window ) { // note: can display while adding
-      //  if(n>4) box.display(#FFCC00);
+      //if(n>4) box.display(#10FFCC00);
     fill(C);
     //noStroke();
     stroke(bodyOutline);
@@ -319,6 +324,15 @@ class Body extends AbstractBody{
     for ( PVector x: coords ) rotate( x, xc, sa, ca ); 
     getOrth(); // get new orthogonal projection
     if (n>4) box.rotate(dphi);
+  }
+  void rotate( float dphi, PVector x1 ) {
+    this.dphi = dphi;
+    phi = phi+dphi;
+    float sa = sin(dphi), ca = cos(dphi);
+    for ( PVector x: coords ) rotate( x, x1, sa, ca ); 
+    getOrth(); // get new orthogonal projection
+    if (n>4) box.rotate(dphi);
+
   }
   void rotate( PVector x, PVector xc, float sa, float ca ) {
     PVector z = PVector.sub(x, xc);

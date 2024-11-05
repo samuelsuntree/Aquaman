@@ -150,16 +150,20 @@ int numCols = (int)pow(2,8);                                 // Number of column
 void setup(){
   int n=(int)pow(2,8);
   int m=(int)pow(2,7);
-  size(1000,600);
+  size(1200,600);
   Window view = new Window(n,m);
 
   // Load x-coordinate data from CSV file
-  xTable = loadTable("C:/Users/10521/Documents/GitHub/Aquaman/x.csv", "header");
+  xTable = loadTable("C:/Users/10521/Documents/HFSP/x.csv", "header");
   // Load y-coordinate data from CSV file
-  yTable = loadTable("C:/Users/10521/Documents/GitHub/Aquaman/y.csv", "header");
+  yTable = loadTable("C:/Users/10521/Documents/HFSP/y.csv", "header");
 
   upWall = new TestLine(0, 36.5, 256, view);                 // 37 because 39 grid is the gap between the top and the begining of the tank, but it is 2 grid thick
-  body = new CSV2DigitalTwin(xTable.getFloat(0,0), yTable.getFloat(0,0), xTable.getRowCount(), "C:/Users/10521/Documents/GitHub/Aquaman/x.csv","C:/Users/10521/Documents/GitHub/Aquaman/y.csv","C:/Users/10521/Documents/GitHub/Aquaman/y_dot.csv",view);
+  body = new CSV2DigitalTwin(xTable.getFloat(0,0), yTable.getFloat(0,0), xTable.getRowCount(), "C:/Users/10521/Documents/HFSP/x.csv","C:/Users/10521/Documents/HFSP/y.csv","C:/Users/10521/Documents/GitHub/Aquaman/output/y_dot.csv",view);
+  for (int t = 5; t < 7; t++) {
+    println("Time step " + t + " average angle (radians): " + body.averageAngles[t]);
+  }
+  println(body.positionsList.size());
   bottomWall = new TestLine(0, 127-38.5, 256, view);
   wall = new BodyUnion(upWall, bottomWall);
   twin = new BodyUnion(body, wall);
@@ -178,8 +182,9 @@ void setup(){
 }
 
 void draw(){
-  if ((int)(flow.t / 0.69 -1) < 236){
+  if ((int)(flow.t / 0.69 -1) < 600){
     time += flow.dt;
+    //println(time);
     body.update(time);
     flow.update(twin); flow.update2();         // 2-step fluid update
     flood.display(flow.u.curl());              // compute and display vorticity
@@ -217,16 +222,18 @@ void draw(){
 
     saveFrame("saved/frame-####.png");
 
-  } else if ((int)(flow.t / 0.69 -1) < 6000) {
-    time += flow.dt;
-    body.translate(-0.1,0);
-    flow.update(twin); flow.update2();         // 2-step fluid update
-    flood.display(flow.u.curl());              // compute and display vorticity
-    body.display();                            // display the body
-    upWall.display();
-    bottomWall.display();
-    saveFrame("saved/frame-####.png");
-  } else {
+  }// else if ((int)(flow.t / 0.69 -1) < 700) {
+  //   time += flow.dt;
+  //   println(time);
+  //   body.translate(-0.1,0);
+  //   flow.update(twin); flow.update2();         // 2-step fluid update
+  //   flood.display(flow.u.curl());              // compute and display vorticity
+  //   body.display();                            // display the body
+  //   upWall.display();
+  //   bottomWall.display();
+  //   saveFrame("saved/frame-####.png");
+  // } 
+  else {
     //dat.finish();
     dataAdd();
     exit();

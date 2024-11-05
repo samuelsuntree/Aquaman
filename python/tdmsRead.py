@@ -16,11 +16,11 @@ root.withdraw()
 # Open the simulated pressure file
 # digital_twin_pressure = pd.read_csv('C:/Users/blagn771/Documents/Aquaman/Aquaman/lily-pad-master/LilyPad/testDataSave/pressure_map_JCGE.csv', header=None)
 digital_twin_pressure = pd.read_csv('C:/Users/10521/Documents/GitHub/Aquaman/lily-pad-master/LilyPad/testDataSave/pressure_map_test.csv', header=None)
-digital_twin_pressure_REF = pd.read_csv('C:/Users/10521/Documents/GitHub/Aquaman/lily-pad-master/LilyPad/testDataSave/pressure_map_test_REF.csv', header=None)
+digital_twin_pressure_REF = pd.read_csv('C:/Users/10521/Documents/GitHub/Aquaman/lily-pad-master/LilyPad/testDataSave/old/pressure_map_test_REF.csv', header=None)
 
 # Ouvrir la boîte de dialogue pour choisir un fichier et obtenir le chemin du fichier
-chemin_fichier = askopenfilename(title="Sélectionnez un fichier TDMS", filetypes=[("Fichiers TDMS", "*.tdms")])
- 
+# chemin_fichier = askopenfilename(title="Sélectionnez un fichier TDMS", filetypes=[("Fichiers TDMS", "*.tdms")])
+chemin_fichier = 'C:/Users/10521/Documents/GitHub/Aquaman/lily-pad-master/LilyPad/testDataSave/old/T3_Fish3_270923.tdms'
 # Vérifier si un fichier a été sélectionné
 if chemin_fichier:
     # Lire le fichier TDMS
